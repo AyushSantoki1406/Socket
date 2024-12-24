@@ -9,9 +9,7 @@ const App = () => {
   });
 
   useEffect(() => {
-    const ws = new WebSocket(
-      `wss://https://seahorse-app-53wlg.ondigitalocean.app}`
-    );
+    const ws = new WebSocket("wss://seahorse-app-53wlg.ondigitalocean.app");
 
     ws.onmessage = (event) => {
       const data = JSON.parse(event.data);
